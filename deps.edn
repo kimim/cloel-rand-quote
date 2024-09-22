@@ -1,0 +1,2 @@
+{:deps {io.github.manateelazycat.cloel/cloel {:mvn/version "1.0.0"}
+        helpshift/faker {:mvn/version "0.3.0"}}}
