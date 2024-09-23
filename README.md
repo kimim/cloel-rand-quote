@@ -12,7 +12,7 @@ Since this plugin is developed based on [cloel](https://github.com/manateelazyca
    - Clone the repository and add it to your Emacs configuration:
 
    ```elisp
-   (add-to-list 'load-path "<path-to-reorder-file>")
+   (add-to-list 'load-path "<path-to-cloel-rand-quote>")
    (require 'cloel-rand-quote)
    ```
 
