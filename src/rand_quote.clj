@@ -1,4 +1,4 @@
-(ns random-quote
+(ns rand-quote
   (:require [cloel :as cloel]
             [faker.quote :as q]))
 
@@ -8,6 +8,10 @@
 (defn rand-quote-handle-client-connected [client-id]
   (rand-quote-start-process-confirm client-id))
 
+(defn get-quote []
+  (q/rand-quote))
+
 (alter-var-root #'cloel/handle-client-connected (constantly rand-quote-handle-client-connected))
 
-(cloel/start-server (Integer/parseInt (first *command-line-args*)))
+(defn -main [& args]
+  (cloel/start-server (Integer/parseInt (last args))))

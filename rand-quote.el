@@ -1,12 +1,12 @@
 (require 'cloel)
 
-(defvar cloel-rand-quote-clj-file (expand-file-name "rand_quote.clj" (file-name-directory load-file-name)))
+(defvar cloel-rand-quote-dir (file-name-directory load-file-name))
 
-(cloel-register-app "rand-quote" cloel-rand-quote-clj-file)
+(cloel-register-app "rand-quote" cloel-rand-quote-dir "cloel")
 
 (defun cloel-rand-quote-request ()
   "Send random quote request to Clojure process."
-  (insert (cloel-rand-quote-call-sync "q/rand-quote")))
+  (insert (cloel-rand-quote-call-sync 'rand-quote/get-quote)))
 
 (defun cloel-rand-quote-start-process-confirm (client-id)
   (message "Start process confirm: %s" client-id)
