@@ -1,3 +1,4 @@
+;; -*- lexical-binding: t; -*-
 (require 'cloel)
 
 (defvar cloel-rand-quote-dir (file-name-directory load-file-name))
